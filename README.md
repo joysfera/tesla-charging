@@ -13,7 +13,9 @@ Pokud máte střídač GoodWe zaintegrován do Home Assistanta (má oficiální 
 
 Samotný algoritmus, který počítá, jak silný proud do Tesly poslat, si můžete prohlédnout v [tomto souboru](logic.js).
 
-Pokud je nedostatek sluneční energie, program posílá minimálně 2 ampéry. Automatické vypnutí nabíjení v podvečer (kdy už je jasné, že slunce už nebude) zatím není uděláno - uživatel musí vypnout nabíjení sám (v mobilní aplikace). V budoucnu zřejmě přidám automatické vypnutí a zapnutí nabíjení podle denního času a dalších parametrů.
+Pokud je nedostatek sluneční energie, program posílá minimálně 2 ampéry (viz první řádek programu). Jinak balancuje nabíjecí proud do Tesly tak, aby udržoval nabití domácí baterie o 15 % výš než je minimální stav (viz třetí řádek programu).
+
+Automatické vypnutí nabíjení v podvečer (kdy už je jasné, že slunce už nebude) zatím není uděláno - uživatel musí vypnout nabíjení sám (v mobilní aplikace). V budoucnu zřejmě přidám automatické vypnutí a zapnutí nabíjení podle denního času a dalších parametrů.
 
 Jestli máte jiný střídač než od GoodWe, stačí upravit proměnné, ze kterých se čtou informace o přebytcích výroby. Jména proměnných zjistíte v Home Assistantovi.
 
